@@ -1,0 +1,153 @@
+/* location */
+#location,
+#servicee,
+#team,
+#formm,
+#contactt {
+    background-color: var(--darkblue);
+    border-radius: 30px 30px 30px 30px;
+    margin-top: 5%;
+}
+
+.left,
+.right {
+    background-color: var(--color9);
+    color: var(--darkblue);
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.location-h,
+.service-h,
+.formm-h,
+.contact-h {
+    border-bottom: 2px solid var(--darkblue);
+}
+
+.location-img img {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.location-text p {
+    margin-right: 20%;
+}
+
+.location-days {
+    display: flex;
+    justify-content: space-between;
+}
+
+.location-week {
+    font-weight: 600;
+}
+
+.address-text .add-text1 {
+    font-weight: 600;
+}
+
+.button-link {
+    border-bottom: 2px solid var(--darkblue);
+}
+
+.button-link img {
+    width: 90%;
+    text-align: center;
+}
+
+
+/* team */
+.team-details ul {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.team-details ul i {
+    font-size: 10px;
+    color: #ee9c9c;
+    margin-right: 10px;
+}
+
+.team-details ul p {
+    display: inline;
+    margin: 0;
+}
+
+.teamD {
+    display: flex;
+    border-bottom: 2px solid var(--darkblue);
+}
+
+.team-img img {
+    width: 200px;
+}
+
+.team-name p {
+    text-align: center;
+    font-weight: 700;
+}
+
+/* service */
+.service-icon {
+    text-align: center;
+}
+
+.service-links .s-link {
+    width: 100%;
+}
+
+.service-links button {
+    width: 100%;
+    border: none;
+    background-color: var(--color9);
+    transition: all 0.3s ease;
+}
+
+.service-links button a {
+    display: block;
+    color: var(--darkblue);
+    text-decoration: none;
+    font-size: 20px;
+    text-align: start;
+}
+
+.s-link a {
+    padding: 10px 10px;
+}
+
+.s-link:hover a {
+    color: white;
+    background-color: var(--darkblue);
+    border-radius: 10px;
+    padding: 10px 10px;
+}
+
+
+/* formm */
+.formm-time-text {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.formm-filled {
+    border-top: 2px solid var(--darkblue);
+}
+
+
+
+/* contact us */
+.contact-address {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-address a {
+    text-decoration: none;
+    color: var(--darkblue);
+}
+
+.contact-text h6 {
+    font-weight: 600;
+}
