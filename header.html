@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techstreet Solutions</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="shortcut icon" href="https://image.jimcdn.com/app/cms/image/transf/dimension=320x10000:format=png/path/s9b253e98c0bb5dd3/image/i879feaefe8b709a7/version/1540999678/image.png" type="image/x-icon">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        .main-item .nav-link,
+        .social-item .nav-link {
+            color: var(--darkblue);
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-right: 16px;
+            position: relative;
+            font-weight: 500;
+            padding: 20px 0;
+        }
+
+        .main-item .nav-link:hover,
+        .social-item .nav-link:hover {
+            color: var(--darkblue);
+        }
+
+        .social-item .nav-link i {
+            font-size: 14px;
+        }
+
+        .social-item .nav-link button {
+            color: var(--darkblue);
+            font-size: 15px;
+            border: 2px solid var(--darkblue);
+            font-weight: 500;
+        }
+
+
+        /* navbar blue underline */
+        .main-item .nav-link::before {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--darkblue);
+            transition: width 0.8s ease;
+        }
+
+
+        .main-item .nav-link:hover::before {
+            width: 100%;
+        }
+
+        .main-item:hover i {
+            transform: rotate(90deg);
+
+        }
+
+        .main-item i {
+            color: var(--darkblue);
+        }
+
+        /* additional content added in navbar */
+        .additional-content {
+            display: none;
+            position: fixed;
+            padding: 20px;
+            width: 100%;
+            top: 10%;
+            z-index: 7;
+            color: var(--darkblue);
+        }
+
+        .additional-content button,
+        .additional-content .Content3btn {
+            color: var(--darkblue);
+        }
+
+        .additional-item .additional-link:hover {
+            text-decoration: underline solid var(--darkblue);
+        }
+
+        .additional-heading {
+            text-transform: uppercase;
+        }
+
+
+
+        /* Adjustments for screens less than or equal to 390px (iPhone 12 Pro portrait mode) */
+        @media only screen and (max-width: 390px) {
+
+            .logo {
+                width: 60px;
+            }
+
+            .navbar-brand {
+                white-space: nowrap;
+                font-size: 10px;
+            }
+        }
+
+        /* Adjustments for screens less than 767px (small devices) */
+        @media only screen and (max-width: 767px) {
+            .navbar-brand {
+                white-space: nowrap;
+            }
+
+            .navbar>.container-fluid {
+                height: 42px;
+            }
+
+            .logo {
+                width: 40%;
+            }
+        }
+
+        @media only screen and (max-width: 821px) {
+            .social-item button {
+                display: none;
+            }
+        }
+
+        @media only screen and (min-width: 1000px) and (max-width: 1901px) {
+            .navbar-brand {
+                white-space: nowrap;
+            }
+        }
+
+        /* Media query for iPad mini and air*/
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+
+            .nav-item .nav-link,
+            .subtitle,
+            .nav-item .social-item {
+                font-size: 8px;
+                white-space: nowrap;
+            }
+
+            .navbar-brand {
+                font-size: 12px !important;
+                white-space: nowrap;
+            }
+
+            .logo {
+                width: 100px !important;
+            }
+
+
+            .header-button {
+                font-size: 8px;
+                padding: 2px 4px;
+                white-space: nowrap;
+            }
+        }
+
+        .additional-content {
+            background-color: aliceblue;
+        }
+
+        #additionalContent {
+            max-width: 200px;
+            left: 15%;
+        }
+
+        #additionalContent button {
+            font-weight: 500;
+            text-align: start;
+            background-color: #f5fafe;
+        }
+
+        #additionalContent button:hover {
+            background-color: #e0f0fd;
+        }
+
+        #additionalContent2 {
+            max-width: 95%;
+            left: 2%;
+        }
+
+        #additionalContent3 {
+            max-width: 250px;
+            left: 30%;
+        }
+
+        #additionalContent3 button {
+            background-color: aliceblue;
+            text-align: start;
+            font-weight: 500;
+        }
+
+        #additionalContent4 {
+            max-width: 95%;
+            left: 2%;
+        }
+
+        table,
+        th,
+        td {
+            padding: 5px;
+        }
+
+        #menuToggle {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            z-index: 1000;
+        }
+
+        #menuToggle a {
+            text-decoration: none;
+            color: #1152a2;
+            transition: color 0.3s ease;
+        }
+
+        #menuToggle input {
+            display: block;
+            width: 40px;
+            height: 32px;
+            position: absolute;
+            top: -7px;
+            left: -5px;
+            cursor: pointer;
+            opacity: 0;
+            z-index: 2;
+            -webkit-touch-callout: none;
+        }
+
+        #menuToggle span {
+            display: block;
+            width: 33px;
+            height: 4px;
+            margin-bottom: 5px;
+            position: relative;
+            background: #cdcdcd;
+            border-radius: 3px;
+            z-index: 1;
+            transform-origin: 4px 0px;
+            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+            opacity: 0.55s ease;
+        }
+
+        #menuToggle span:first-child {
+            transform-origin: 0% 0%;
+        }
+
+        #menuToggle span:nth-last-child(2) {
+            transform-origin: 0% 100%;
+        }
+
+        #menuToggle input:checked~span {
+            opacity: 1;
+            transform: rotate(45deg) translate(-2px, -1px);
+            background: #232323;
+        }
+
+        #menuToggle input:checked~span:nth-last-child(3) {
+            opacity: 0;
+            transform: rotate(0deg) scale(0.2, 0.2);
+        }
+
+        #menuToggle input:checked~span:nth-last-child(2) {
+            transform: rotate(-45deg) translate(0, -1px);
+        }
+
+        #menu {
+            display: none;
+            position: absolute;
+            width: 300px;
+            margin: -100px 0 0 -122px;
+            padding: 50px;
+            padding-top: 125px;
+            background: #ededed;
+            list-style-type: none;
+            -webkit-font-smoothing: antialiased;
+            transform-origin: 0% 0%;
+            transform: translate(-100%, 0);
+            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+        }
+
+        #menu li {
+            padding: 10px 0;
+            font-size: 12px;
+        }
+
+        #menuToggle input:checked~ul {
+            transform: none;
+        }
+
+        @media only screen and (min-width: 768px) {
+            #menuToggle {
+                display: none;
+            }
+        }
+        
+        
+        .logo-header.d-flex.align-items-center.ms-5 img {
+    width: 9vw;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9px;
+}
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar myClass navbar-expand-md fixed-top py-0" style="background-color: white;">
+        <div class="container-fluid">
+            <div class="logo-header d-flex align-items-center ms-5">
+                <img src="img/logo.png" class="logo me-2" width="50%" alt="" srcset="">
+
+            </div>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav justify-content-start align-items-center">
+
+                    <li class="nav-item main-item">
+                        <a class="nav-link" href="index.html">Home 
+                            <!-- <i class="fa-solid fa-arrow-right"></i> -->
+                        </a>
+                    </li>
+
+                    <li class="nav-item main-item">
+                        <a class="nav-link" href="location.html">Praxis</a>
+                    </li>
+                    <li class="nav-item main-item">
+                        <a class="nav-link" href="team.html">Team</a>
+                    </li>
+                    <li class="nav-item main-item">
+                        <a class="nav-link" href="service.html">Leistungen</a>
+                    </li>
+                    <li class="nav-item main-item">
+                        <a class="nav-link" href="form.html">online-termin-vergabe</a>
+                    </li>
+                    <li class="nav-item main-item">
+                        <a class="nav-link" href="contact.html">Kontakt & anfahrt</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav justify-content-end align-items-center ms-auto">
+
+                    <!-- <li class="nav-item social-item">
+            <a class="nav-link" href="#"><i class="fa-brands fa-twitter"></i></a>
+          </li>
+
+          <li class="nav-item social-item">
+            <a class="nav-link" href="#"><i class="fa-brands fa-facebook"></i></a>
+          </li>
+
+          <li class="nav-item social-item border-end">
+            <a class="nav-link me-4" href="#"><i class="fa-brands fa-instagram"></i></a>
+          </li> -->
+
+                    <li class="nav-item social-item ms-5">
+                        <a class="nav-link" href="#">
+                            <button class="bg-light border-1 px-4 py-2 rounded-pill">Order a call <i class="fa-solid fa-arrow-right" style="#19AF96"></i></button>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- toogle -->
+            <div id="menuToggle">
+
+                <input type="checkbox" />
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <ul id="menu">
+                    <a href="#">
+                        <li>Home</li>
+                    </a>
+                    <a href="#">
+                        <li>About</li>
+                    </a>
+                    <a href="#">
+                        <li>Info</li>
+                    </a>
+                    <a href="#">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </div>
+            <!-- toogle ends -->
+
+
+        </div>
+    </nav>
+
+
+    <!-- Additional Content of home-->
+    <!-- <div class="additional-content f-flex flex-column" id="additionalContent">
+        <button class="p-3 border-0 border-bottom">Home 1</button>
+        <button class="p-3 border-0">Home 2</button>
+    </div>
+
+    <div class="additional-content" id="additionalContent2">
+        <div class="row">
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-12 border-bottom ms-2">
+                        <div class="d-flex justify-content-between mb-3">
+                            <h3>Well-Crafted Homepages Holds Significance In Establishing Trust</h3>
+                            <button class="text-light bg-primary rounded-pill p-2 border-0" style="width: 20%;" type="button">Explore
+                                our website</button>
+                        </div>
+                    </div>
+
+                    <div class="col-3 mt-3">
+                        <ul class="additional-item" style="list-style: none;">
+                            <h6 class="additional-heading">Services</h4>
+                                <li class="additional-link mt-4">X-Ray & Diagnostics</li>
+                                <li class="additional-link mt-4">Braces Installation</li>
+                                <li class="additional-link mt-4">Teeth Whitening</li>
+                                <li class="additional-link mt-4">Veneers Installation</li>
+                                <li class="additional-link mt-4">Dental Surgery</li>
+                                <li class="additional-link mt-4">Dentist's Profile</li>
+                                <li class="additional-link mt-4">Single Case</li>
+                        </ul>
+                    </div>
+                    <div class="col-3 mt-3">
+                        <ul class="additional-item" style="list-style: none;">
+                            <h6 class="additional-heading">Pages</h4>
+                                <li class="additional-link mt-4">Portfolio Cases</li>
+                                <li class="additional-link mt-4">About</li>
+                                <li class="additional-link mt-4">Portfolio</li>
+                                <li class="additional-link mt-4">Services</li>
+                                <li class="additional-link mt-4">Team</li>
+                                <li class="additional-link mt-4">Coming Soon</li>
+                                <li class="additional-link mt-4">Page 404</li>
+                        </ul>
+                    </div>
+                    <div class="col-3 mt-3">
+                        <ul class="additional-item" style="list-style: none;">
+                            <h6 class="additional-heading">Shop</h4>
+                                <li class="additional-link mt-4">Product List 3 Col</li>
+                                <li class="additional-link mt-4">Product List 4 Col</li>
+                                <li class="additional-link mt-4">Single Product</li>
+                                <li class="additional-link mt-4">Shopping Cart</li>
+                        </ul>
+                    </div>
+                    <div class="col-3 mt-3">
+                        <ul class="additional-item" style="list-style: none;">
+                            <h6 class="additional-heading">Blog</h4>
+                                <li class="additional-link mt-4">Blog – 3 Col</li>
+                                <li class="additional-link mt-4">Blog – 2 Col + Sidebar</li>
+                                <li class="additional-link mt-4">Single Blog Post</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <img src="https://promo-theme.com/densmi/wp-content/uploads/2023/12/densmi-89.webp" width="100%" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+
+    <div class="additional-content f-flex flex-column" id="additionalContent3">
+        <button class="p-3 border-0 Content3btn">Cart</button>
+        <button class="p-3 border-0 Content3btn">Checkout</button>
+        <button class="p-3 border-0 Content3btn">Shop – 3 Col + Sidebar</button>
+        <button class="p-3 border-0 Content3btn">Shop – 4 Col + Banner</button>
+        <button class="p-3 border-0 Content3btn">Single Product</button>
+    </div>
+
+    <div class="additional-content" id="additionalContent4">
+        <div class="row">
+            <div class="col-8">
+                <div class="row ">
+                    <div class="col-12 border-bottom ms-2">
+                        <div class="d-flex justify-content-between mb-3">
+                            <h3>Well-Crafted Homepages Holds Significance In Establishing Trust</h3>
+                            <button class="text-light bg-primary rounded-pill border-0" style="width: 20%;" type="button">Explore our
+                                blog</button>
+                        </div>
+                    </div>
+
+                    <div class="col-5 border-end mt-3">
+                        <img src="https://promo-theme.com/densmi/wp-content/uploads/2023/12/densmi-51.webp" width="50%" alt="" srcset="">
+                        <p>DECEMBER 13, 2023 ADMIN</p>
+                        <p style="font-weight: 700;">Demystifying Dental Myths: Separating Fact from Fiction</p>
+                        <p>Read More <i class="fa-solid fa-arrow-right"></i></p>
+                    </div>
+
+                    <div class="col-6 mt-3 ms-2">
+                        <table>
+                            <tr>
+                                <td rowspan="2"><img src="https://promo-theme.com/densmi/wp-content/uploads/2023/12/densmi-52.webp" width="50%" alt="" srcset=""></td>
+                                <td>The ABCs of Oral Health: A Comprehensive Guide to Dental Care</td>
+                            </tr>
+                            <tr class="p-2">
+                                <td>Read More <i class="fa-solid fa-arrow-right"></i></td>
+                            </tr>
+
+                            <tr>
+                                <td rowspan="2"><img src="https://promo-theme.com/densmi/wp-content/uploads/2023/12/densmi-52.webp" width="50%" alt="" srcset=""></td>
+                                <td>The ABCs of Oral Health: A Comprehensive Guide to Dental Care</td>
+                            </tr>
+                            <tr class="p-2">
+                                <td>Read More <i class="fa-solid fa-arrow-right"></i></td>
+                            </tr>
+
+                            <tr>
+                                <td rowspan="2"><img src="https://promo-theme.com/densmi/wp-content/uploads/2023/12/densmi-52.webp" width="50%" alt="" srcset=""></td>
+                                <td>The ABCs of Oral Health: A Comprehensive Guide to Dental Care</td>
+                            </tr>
+                            <tr class="p-2">
+                                <td>Read More <i class="fa-solid fa-arrow-right"></i></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-4 text-end">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQILHi6mLM54FxEnbHeoIDZryy2dx-nRRKZAEbUKy7e65S8gw1l" width="50%" alt="" srcset="">
+            </div>
+        </div>
+    </div> -->
+    <!-- end of Additional Content of blog -->
+
+
+
+    <!-- navbar ends -->
+
+
+    <!-- script -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/owl.carousel.min.js'></script>
+    <script src='https://use.fontawesome.com/826a7e3dce.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+
+    <!-- <?php
+    echo "<script>";
+    echo "$(document).ready(function() {";
+
+    echo "  function handleHover(item, additionalContent) {";
+    echo "    var timer;";
+    echo "    $(item).on('mouseenter', function() {";
+    echo "      clearTimeout(timer);"; 
+    echo "      $(additionalContent).css('display', 'flex');"; 
+    echo "    }).on('mouseleave', function() {";
+    echo "      timer = setTimeout(function() {";
+    echo "        $(additionalContent).hide();";
+    echo "      }, 200);";
+    echo "    });";
+    echo "    $(additionalContent).on('mouseenter', function() {";
+    echo "      clearTimeout(timer);";
+    echo "    }).on('mouseleave', function() {";
+    echo "      timer = setTimeout(function() {";
+    echo "        $(additionalContent).hide();";
+    echo "      }, 200);"; 
+    echo "    });";
+    echo "  }";
+
+    echo "  handleHover('#homeItem', '#additionalContent');";
+    echo "  handleHover('#pageItem', '#additionalContent2');";
+    echo "  handleHover('#shopItem', '#additionalContent3');";
+    echo "  handleHover('#blogItem', '#additionalContent4');";
+    echo "});";
+    echo "</script>";
+    ?> -->
+
+    <script>
+        $(document).ready(function() {
+            $('#menuToggle input').click(function() {
+                $('#menu').toggle(); 
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

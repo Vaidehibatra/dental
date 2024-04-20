@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- css -->
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+
+<style>
+    #banner-main img {
+        margin-top: 2%;
+    }
+
+    #banner-main img {
+        object-fit: cover;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .banner-prev i,
+    .banner-next i {
+        font-size: 50px;
+        color: #1152a2;
+        background-color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 50px;
+        position: relative;
+        top: 40%;
+    }
+
+    .banner-prev i {
+        left: 100%;
+    }
+
+    .banner-next i {
+        right: 100%;
+    }
+
+    .banner-text {
+        position: absolute;
+        bottom: 40%;
+        width: 40%;
+        margin-left: 20px;
+        background-color: #1152a2;
+        opacity: 0.8;
+        padding: 20px;
+        border-radius: 30px;
+    }
+
+    .banner-text h1 {
+        color: white;
+        opacity: 1;
+    }
+
+    @media (max-width: 800px) {
+        .banner-text {
+            word-wrap: break-word;
+            width: 60%;
+        }
+    }
+</style>
+
+
+<body>
+
+    <div id="banner-main">
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000">
+                    <img src="https://images.pexels.com/photos/305565/pexels-photo-305565.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block" alt="...">
+                    <div class="banner-text">
+                        <h1>Sanfte Pflege Garantiert</h1>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="https://images.pexels.com/photos/287227/pexels-photo-287227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block" alt="...">
+                    <div class="banner-text">
+                        <h1>Ihr Lächeln, unsere Priorität</h1>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="https://promo-theme.com/densmi/wp-content/uploads/2023/12/densmi-57.webp" class="d-block" alt="...">
+                    <div class="banner-text">
+                        <h1>Sanfte Zahnmedizinische Versorgung</h1>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev banner-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next banner-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+
+    </div>
+
+
+    <!-- script -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/owl.carousel.min.js'></script>
+    <script src='https://use.fontawesome.com/826a7e3dce.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
